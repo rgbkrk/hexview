@@ -1,6 +1,8 @@
-# hexview
+=======
+hexview
+=======
 
-Hexdump++
+Hexdump++ for python, integration with IPython
 
 Hexview provides ways to visualize binary data within IPython or Python and even export HTML or LaTeX.
 
@@ -54,6 +56,5 @@ Example usage:
 ```
 
 (IPython notebook (on nbviewer))[]
-
 
 
