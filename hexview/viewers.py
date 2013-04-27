@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import string
 from binascii import hexlify
+
+def printables(s):
+    get_printable = lambda x: x if x in string.printable else "."
+    return "".join(map(get_printable, s))
 
 class HexView(object):
     '''
@@ -36,7 +41,7 @@ class HexView(object):
 
     def __init__(self, data, width=16, split=2, limit=7, text_dump=True):
         # The original data
-        # TODO: Work with mmap
+        # TODO: Try out other iterables, unicode, mmap
         self.bindata = data
         # Width of the hex dump (in bytes)
         self.width = width
@@ -54,7 +59,8 @@ class HexView(object):
     def __repr__(self):
         return str(self)
 
-    def build_row(self,row,col,width):
+
+    def build_row(self,row,width):
         '''
         Builds an individual row for hexdumping
         '''
@@ -64,6 +70,24 @@ class HexView(object):
             if(index < len(self.bindata)):
                 build_str += hexlify(self.bindata[index])
                 build_str += " " if (col-1) % self.split == 0 else ""
+
+        if(self.text_dump):
+            build_str += " "
+            row_length = min(row+width, len(self.bindata))
+
+
+            # TODO: Finish this math after waking up...
+            # Length of actual printed hex + space = num_cols*2 +
+            # num_cols/self.split
+
+            # Length of actual space available == self.width*2 +
+            # self.width*2/self.split
+
+
+            if(row_length == len(self.bindata)):
+                build_str += " "*2*(width-(len(self.bindata) % width))
+
+            build_str += printables(self.bindata[row:row_length])
 
         return build_str
 
@@ -81,7 +105,7 @@ class HexView(object):
         rows = []
 
         for row in range(0,max_display_bytes,width):
-            build_str = self.build_row(row,col,width)
+            build_str = self.build_row(row,width)
             rows.append(build_str)
 
         if(print_excess):
@@ -90,7 +114,7 @@ class HexView(object):
             num_rows = len(self.bindata)/width
             row = num_rows*width
 
-            build_str = self.build_row(row,col,width)
+            build_str = self.build_row(row,width)
             rows.append(build_str)
 
         return ("\n".join(rows))
