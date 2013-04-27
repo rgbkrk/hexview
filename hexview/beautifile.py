@@ -105,3 +105,8 @@ class Annotator:
         if(end==None):
             end = start+1
 
+        for ii in range(start, end):
+            if(curr != self.LUT.get(ii, "unknown")):
+                # Form new grouping
+                ll.append((curr, st, ii))
+
