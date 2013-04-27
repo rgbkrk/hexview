@@ -1,28 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import hexview
+
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-packages = [
-        'hexview'
-]
-
 requires = []
 
 setup(
-    name='hexview'
+    name='hexview',
     version=hexview.__version__,
-    description='Hexdump in Python'
+    description='Hexdump in Python',
     long_description=open('README.md').read(),
     author='Kyle Kelley',
     author_email='rgbkrk@gmail.com',
     url='http://github.com/rgbkrk/hexview',
-    packages=packages,
+    packages=['hexview'],
     package_data={'': ['LICENSE']},
-    package_dir={'hexview','hexview'},
+    #package_dir={'hexview','hexview'},
     include_package_data=True,
     install_requires=requires,
     setup_requires=[], # Later, sphinx
