@@ -2,7 +2,9 @@
 hexview
 =======
 
-Hexdump++ for python, integration with IPython
+Hexdump++ for python, integration with IPython.
+
+**This is currently a work in progress**
 
 Hexview provides ways to visualize binary data within IPython or Python and even export HTML or LaTeX.
 
@@ -54,7 +56,5 @@ Example usage:
    color: #442200;
 }'
 ```
-
-(IPython notebook (on nbviewer))[]
 
 
