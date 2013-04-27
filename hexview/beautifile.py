@@ -96,8 +96,12 @@ class Annotator:
         >>> a.annotate(category="magic", start=0x0, end=0x2)
         >>> a.annotate(category="compression_method", start=0x2)
         >>> a.feedback(0x1,0x3)
-        [('magic', 1,2), ('compression_method',2,3)]
+        [('magic',1,2), ('compression_method',2,3)]
 
         '''
-        pass
+        ll = []
+        curr = self.LUT.get(start, "unknown")
+        st = start
+        if(end==None):
+            end = start+1
 
