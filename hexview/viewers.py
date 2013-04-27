@@ -94,6 +94,9 @@ class HexView(object):
         00000000: 41414141414141414141414141414141  AAAAAAAAAAAAAAAA
 
         '''
+        if(row >= len(self.bindata)):
+                raise IndexError("Data slice out of range")
+
         build_str = "%08x: " % row
         for col in range(width):
             index = row + col
