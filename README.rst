@@ -5,6 +5,9 @@ Hexdump++ for python, integration with IPython.
 
 **This is currently a work in progress and is still being designed.**
 
+.. image:: https://travis-ci.org/rgbkrk/hexview.png?branch=master
+        :target: https://travis-ci.org/rgbkrk/hexview
+
 Hexview provides ways to visualize binary data within IPython or Python and even export HTML or LaTeX.
 
 Hexview keeps context of fields via annotators.
