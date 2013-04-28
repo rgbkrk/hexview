@@ -12,6 +12,7 @@ Hexview keeps context of fields via annotators.
 Example/planned usage:
 
 .. code-block:: python
+
    >>> from hexview import HexView
    >>> data = open("data/requests-1.2.0.tar.gz","rb").read()
    >>> hv = HexView(data)
