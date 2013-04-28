@@ -64,7 +64,7 @@ To install hexview, for now use
 .. code-block:: bash
    $ python setup.py install
 
-(adding this to PyPI is planned after I write up the tests)
+(adding this to PyPI is planned after I write up more tests)
 
 
 
