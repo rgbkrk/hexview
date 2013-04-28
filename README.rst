@@ -56,4 +56,15 @@ Example/planned usage:
    }'
 
 
+Installation
+------------
+
+To install hexview, for now use
+
+.. code-block:: bash
+   $ python setup.py install
+
+(adding this to PyPI is planned after I write up the tests)
+
+
 
