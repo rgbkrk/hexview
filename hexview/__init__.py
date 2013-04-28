@@ -45,7 +45,8 @@ Example usage:
 
 """
 
-from viewers import HexView
+from . import viewers
+from .viewers import HexView
 
 __title__ = 'requests'
 __version__ = '0.1'
