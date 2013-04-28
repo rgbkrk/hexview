@@ -3,7 +3,7 @@ hexview
 
 Hexdump++ for python, integration with IPython.
 
-**This is currently a work in progress**
+**This is currently a work in progress and is still being designed.**
 
 Hexview provides ways to visualize binary data within IPython or Python and even export HTML or LaTeX.
 
