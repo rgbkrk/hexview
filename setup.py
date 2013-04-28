@@ -14,7 +14,7 @@ setup(
     name='hexview',
     version=hexview.__version__,
     description='Hexdump in Python',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author='Kyle Kelley',
     author_email='rgbkrk@gmail.com',
     url='http://github.com/rgbkrk/hexview',
