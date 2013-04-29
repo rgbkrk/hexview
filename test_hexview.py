@@ -43,6 +43,21 @@ class HexviewTestCase(unittest.TestCase):
         match = ("{:08x}: ".format(12) + "4141 "*6 + " " + "A"*12)
         self.assertEqual(dump,match)
 
+    def test_printable(self):
+        self.fail("TODO: Test printables")
+
+    def test_limit(self):
+        self.fail("TODO: Test limit")
+
+    def test_text_dump(self):
+        self.fail("TODO: Test text dump")
+
+    def test_split(self):
+        self.fail("TODO: Test split size")
+
+    def test_html(self):
+        self.fail("TODO: Test html output")
+
 
 if __name__  == "__main__":
     doctest.testmod(hexview)
