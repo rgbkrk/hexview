@@ -37,7 +37,7 @@ class HexviewTestCase(unittest.TestCase):
         dump = hex_view.dump()
         self.assertIn(": " + "4141 41" + " AAA",dump)
 
-doctests = doctest.DocTestSuite(hexview)
-
 if __name__  == "__main__":
+    doctest.testmod(hexview)
     unittest.main()
+
