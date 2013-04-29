@@ -31,7 +31,7 @@ Example usage:
 00535f0: 3feb 67fd ac9f f5b3 7ed6 cfbf e5f3 77ce  ?.g.....~.....w.
 0053600: 1de6 0a00 780f 00                        ....x..
 
->>> hv.dump(width=12)
+>>> print(hv.dump(width=12))
 0000000: 1f8b 0808 8cc9 5751 02ff 6469  ......WQ..di
 000000c: 7374 2f72 6571 7565 7374 732d  st/requests-
 0000018: 312e 322e 302e 7461 7200 ec7d  1.2.0.tar..}
@@ -46,6 +46,7 @@ Example usage:
 """
 
 from . import viewers
+from . import annotators
 from .viewers import HexView
 
 __title__ = 'requests'

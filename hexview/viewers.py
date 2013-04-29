@@ -103,7 +103,7 @@ class HexView(object):
             if(index < len(self.bindata)):
                 build_str += hexlify(self.bindata[index])
                 # Group bytes on `split`
-                build_str += " " if col % self.split == self.split-1 else ""
+                build_str += " " if col % self.split == (self.split-1) else ""
 
         if(self.text_dump):
             build_str += " "
@@ -115,16 +115,16 @@ class HexView(object):
                                                    # offsets
                 total_spacing = (
                                  width*2 + # Two nibbles in a byte
-                                 width/self.split # Spacing between groups
+                                 (width+1)/self.split # Spacing between groups
                                 )
 
-                build_str += " "*(total_spacing - hex_space + 1)
+                build_str += " "*(total_spacing - hex_space)
 
             build_str += printables(self.bindata[row:row_length])
 
         return build_str
 
-    def dump(self, width=16,limit=7):
+    def dump(self, width=None,limit=None):
         '''
         Builds out a pure hexdump (no styling)
 
@@ -159,6 +159,12 @@ class HexView(object):
         00000001: 41  A
 
         '''
+
+        if(width == None):
+            width = self.width
+        if(limit == None):
+            limit = self.limit
+
         max_display_bytes = min(len(self.bindata),limit*width)
 
         if(max_display_bytes != len(self.bindata)):
