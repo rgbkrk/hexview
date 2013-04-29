@@ -37,6 +37,13 @@ class HexviewTestCase(unittest.TestCase):
         dump = hex_view.dump()
         self.assertIn(": " + "4141 41" + " AAA",dump)
 
+    def test_build_row(self):
+        hv = hexview.HexView("A"*45)
+        dump = hv.build_row(12,12)
+        match = ("{:08x}: ".format(12) + "4141 "*6 + " " + "A"*12)
+        self.assertEqual(dump,match)
+
+
 if __name__  == "__main__":
     doctest.testmod(hexview)
     unittest.main()
