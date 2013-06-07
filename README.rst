@@ -73,3 +73,9 @@ To install hexview, for now use
 
 
 
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/rgbkrk/hexview/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
