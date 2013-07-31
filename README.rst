@@ -3,7 +3,7 @@ hexview
 
 Hexdump++ for python, integration with IPython.
 
-**This is currently a work in progress and is still being designed.**
+**In 1990's style I'm going to tell you straight up this is under construction but I likely won't touch it compared to other projects unless someone asks for it.**
 
 .. image:: https://travis-ci.org/rgbkrk/hexview.png?branch=master
         :target: https://travis-ci.org/rgbkrk/hexview
